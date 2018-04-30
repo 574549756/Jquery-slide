@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>无缝的轮播</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="window">
+        <div class="windowInside">
+            <div class="images" id="images">
+                <img src="./img/fallOut4.jpg" alt="图片" width="640" height="360">
+                <img src="./img/FarCry.jpg" alt="图片" width="640" height="360">
+                <img src="./img/GTA5.jpg" alt="图片" width="640" height="360">
+                <img src="./img/the Elder Scroll.jpg" alt="图片" width="640" height="360">
+                <img src="./img/Uncharted.jpg" alt="图片" width="640" height="360">
+                <!--为了防止重排（图片没加载出来的时候占位符卡在那里，所有图片都挤在前面，加载完毕以后所有图片再往后挪，特别浪费性能）
+                所以先把它们的宽度（高度）定了，这样图片即使没加载出来，还是待在原来的位置（因为浏览器就认定这个元素这么宽，把位置占着）-->
+            </div>
+        </div>
+        <div class="arrow">
+            <div class="left">
+                    <img src="./img/arrow.png" alt="" width="50" height="50">
+                </div>
+            <div class="right">
+                <img src="./img/arrow.png" alt="" width="50" height="50">            
+            </div>
+        </div>
+        <div id="buttons">
+            <div class="normal"></div>
+            <div class="normal"></div>
+            <div class="normal"></div>
+            <div class="normal"></div>
+            <div class="normal"></div>
+        </div>
+    </div>
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

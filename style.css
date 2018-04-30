@@ -1,0 +1,89 @@
+*{margin: 0;padding:0;}
+*{box-sizing: border-box}
+.images{
+    position: relative;
+}
+.window{
+    margin: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.windowInside{
+    left: 50%;
+    margin-top: auto;
+    width: 640px;
+    height: 360px;
+    overflow: hidden;
+}
+.images > img{
+    width: 100%;
+    transition: all 0.3s;
+    position: absolute;
+    top:0;
+}
+.images > img.current{
+    left: 0;
+    transform: translateX(0);
+    z-index:1;
+}
+.images > img.leave{
+    transform: translateX(-100%);
+    z-index:1;
+}
+.images > img.enter{
+    transform: translateX(100%)
+}
+.images > img.stay{
+    transform: translateX(100%)    
+}
+
+.images > img.right{
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#buttons > div{
+    display: block;
+    margin: 5px 8px;
+    border-radius: 7px;
+    width: 14px;
+    height: 14px;
+    background: rgba(0,0,0,0.005);
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0,0.2);
+	transition: all 0.5s;
+}
+.black{
+    background: rgba(0, 0, 0,0.5)!important;
+	box-shadow: 0 0 4px 2px rgba(0, 0, 0,0.2)!important;
+}
+.arrow{
+    position: absolute;
+    top: 40%;
+    display: flex;
+}
+.left{
+    transform: rotate(180deg);
+    align-self: flex-start;
+    margin-right: 350px;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.right{
+    align-self: flex-end;
+    margin-left: 350px;
+    opacity: 0.5;
+    transition: all 0.5s;    
+}
+.left:hover,
+.right:hover{
+    opacity: 0.7;
+}
