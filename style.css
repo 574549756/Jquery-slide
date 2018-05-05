@@ -1,10 +1,26 @@
 *{margin: 0;padding:0;}
 *{box-sizing: border-box}
+.icon {
+    width: 60px; height: 60px;
+    vertical-align: -0.15em;
+    fill: white;
+    overflow: hidden;
+}
+body{
+    background:url(./img/controller.jpg) no-repeat center center;
+    background-size: 100% 100% cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+}
 .images{
-    position: relative;
+    display: flex;
+    transition: all 0.3s;
 }
 .window{
-    margin: 80px 20px;
+    margin: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,73 +33,84 @@
     width: 640px;
     height: 360px;
     overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.2),0 0 3px 3px rgba(231, 231, 231, 0.1);
+}
+.window:hover .windowInside{
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.4),0 0 20px 6px rgba(231, 231, 231, 0.3);
 }
 .images > img{
     width: 100%;
-    transition: all 0.3s;
-    position: absolute;
-    top:0;
-}
-.images > img.current{
-    left: 0;
-    transform: translateX(0);
-    z-index:1;
-}
-.images > img.leave{
-    transform: translateX(-100%);
-    z-index:1;
-}
-.images > img.enter{
-    transform: translateX(100%)
-}
-.images > img.stay{
-    transform: translateX(100%)    
-}
-
-.images > img.right{
-    position: absolute;
-    top: 0;
-    left: 100%;
 }
 
 #buttons{
+    z-index: 5;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-}
-#buttons > div{
-    display: block;
-    margin: 5px 8px;
+    margin-top: -30px;
+    background: rgba(192, 192, 192, 0);
     border-radius: 7px;
-    width: 14px;
-    height: 14px;
-    background: rgba(0,0,0,0.005);
-    box-shadow: 0 0 4px 1px rgba(0, 0, 0,0.2);
+}
+#buttons > :first-child{
+    margin: 0 0 0 10px;
+}
+#buttons > :last-child{
+    margin: 0 10px 0 0;
+}
+#buttons > #normal > #inside{
+    z-index: 10;
+    display: block;
+    margin: 0 2px;
+    border-radius: 1px;
+    width: 25px;
+    height: 2px;
+    background: rgba(231, 231, 231, 0.7);
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0,0.2);
 	transition: all 0.5s;
 }
-.black{
-    background: rgba(0, 0, 0,0.5)!important;
-	box-shadow: 0 0 4px 2px rgba(0, 0, 0,0.2)!important;
-}
-.arrow{
-    position: absolute;
-    top: 40%;
-    display: flex;
-}
-.left{
-    transform: rotate(180deg);
-    align-self: flex-start;
-    margin-right: 350px;
-    opacity: 0.5;
+#buttons > #normal > #inside > div{
+    background: rgba(0, 0, 0,0.8);
+    width: 0;
+    height: 2px;
+    border-radius: 1px;
     transition: all 0.5s;
 }
-.right{
-    align-self: flex-end;
-    margin-left: 350px;
-    opacity: 0.5;
-    transition: all 0.5s;    
+#buttons > .black > #inside > div{
+    background: rgba(0, 0, 0,0.8);
+    width: 25px!important;
+    height: 2px;
+    border-radius: 1px;
 }
-.left:hover,
-.right:hover{
-    opacity: 0.7;
+#buttons > .black > #inside{
+	box-shadow:0 0 3px 1px rgba(231, 231, 231, 0.8)!important;
+}
+#buttons > div{
+    z-index: 10;
+    display: block;
+    padding: 10px 0;
+}
+
+.arrow{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 44%;
+    display: flex;
+}
+#left{
+    opacity: 0.6;
+    transition: all 0.5s;
+    top: 0;
+    margin-right: 260px;
+}
+#right{
+    opacity: 0.6;
+    transition: all 0.5s;
+    top: 0;
+    margin-left: 260px;
+}
+#left:hover,
+#right:hover{
+    opacity: 0.9;
 }

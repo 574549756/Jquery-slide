@@ -9,7 +9,7 @@
 <body>
     <div class="window">
         <div class="windowInside">
-            <div class="images" id="images">
+            <div class="images" id="slides">
                 <img src="./img/fallOut4.jpg" alt="图片" width="640" height="360">
                 <img src="./img/FarCry.jpg" alt="图片" width="640" height="360">
                 <img src="./img/GTA5.jpg" alt="图片" width="640" height="360">
@@ -20,21 +20,26 @@
             </div>
         </div>
         <div class="arrow">
-            <div class="left">
-                    <img src="./img/arrow.png" alt="" width="50" height="50">
-                </div>
-            <div class="right">
-                <img src="./img/arrow.png" alt="" width="50" height="50">            
+            <div id="left">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-previewleft"></use>
+                </svg>
+            </div>
+            <div id="right">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-previewright"></use>
+                </svg>
             </div>
         </div>
         <div id="buttons">
-            <div class="normal"></div>
-            <div class="normal"></div>
-            <div class="normal"></div>
-            <div class="normal"></div>
-            <div class="normal"></div>
+            <div id="normal"><div id="inside"><div></div></div></div>
+            <div id="normal"><div id="inside"><div></div></div></div>
+            <div id="normal"><div id="inside"><div></div></div></div>
+            <div id="normal"><div id="inside"><div></div></div></div>
+            <div id="normal"><div id="inside"><div></div></div></div>
         </div>
     </div>
+    <script src="//at.alicdn.com/t/font_654475_agzz76oxjdk21emi.js"></script>
     <script src="./jquery-3.3.1.min.js"></script>
     <script src="./main.js"></script>
 </body>
