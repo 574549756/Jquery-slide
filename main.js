@@ -42,8 +42,6 @@ function gotoSlide(index){
     }else if(index < 0){
         index = $buttons.length - 1
     }
-    console.log('index','current')
-    console.log(index, current)
     if(current === $buttons.length-1 && index === 0){
         //最后一张到第一张
         $slides.css({transform:`translateX(${-($buttons.length+1) * 640}px)`})
