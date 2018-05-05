@@ -36,6 +36,16 @@ $('.windowInside, #buttons, .arrow').on('mouseenter', function(){
     }, 2000)
 })
 
+document.addEventListener('visibilitychange', function(e){
+    if(document.hidden){
+        window.clearInterval(timer)
+    }else{
+        timer = setInterval(function(){
+            gotoSlide(current + 1)
+        }, 2000)
+    }
+})
+
 function gotoSlide(index){
     if(index > $buttons.length-1){
         index = 0
